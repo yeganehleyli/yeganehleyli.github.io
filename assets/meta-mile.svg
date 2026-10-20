@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 375">
+<defs><pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0v32" fill="none" stroke="#ced6da" stroke-width=".6"/></pattern><filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#253f48" flood-opacity=".12"/></filter></defs>
+<rect width="600" height="375" fill="#dce4e4"/><rect width="600" height="375" fill="url(#grid)" opacity=".6"/>
+<text x="32" y="36" font-family="Arial,sans-serif" font-size="9" letter-spacing="2" fill="#45606a">META-MILE / A FRAMEWORK FOR POSSIBILITY</text>
+<circle cx="499" cy="95" r="48" fill="#c9d2bd"/>
+<g filter="url(#s)"><path d="m133 250 167-72 167 72-167 75Z" fill="#809fa3"/><path d="m133 250 167 75 167-75v13l-167 75-167-75Z" fill="#54797f"/><path d="m133 211 167-72 167 72-167 75Z" fill="#a8bfbd"/><path d="m133 211 167 75 167-75v12l-167 75-167-75Z" fill="#8ba5a4"/><path d="m133 172 167-72 167 72-167 75Z" fill="#f6f5eb"/><path d="m133 172 167 75 167-75v12l-167 75-167-75Z" fill="#d3ddce"/></g>
+<path d="m206 170 94-40 94 40-94 42Z" fill="none" stroke="#748f7e" stroke-dasharray="4 4"/>
+<g fill="#365846"><circle cx="300" cy="135" r="12"/><path d="M284 168v-8c0-17 32-17 32 0v8Z"/></g>
+<g fill="#b16b52"><circle cx="219" cy="169" r="9"/><path d="M206 195v-6c0-13 26-13 26 0v6Z"/></g>
+<g fill="#7998a1"><circle cx="380" cy="169" r="9"/><path d="M367 195v-6c0-13 26-13 26 0v6Z"/></g>
+<path d="M432 166h74M432 214h74M432 263h74" stroke="#5a7476" stroke-width=".8"/><g fill="#49656c" font-family="Arial,sans-serif" font-size="8" letter-spacing="1"><text x="511" y="169">EXPLORE</text><text x="511" y="217">BELONG</text><text x="511" y="266">ACCESS</text></g>
+<text x="32" y="346" font-family="Georgia,serif" font-size="23" fill="#34505a">Inclusive by design.</text><text x="549" y="346" font-family="Arial,sans-serif" font-size="10" fill="#49656c">01</text>
+</svg>

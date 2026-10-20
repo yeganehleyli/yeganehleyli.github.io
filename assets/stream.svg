@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 375">
+<defs><filter id="s"><feDropShadow dx="0" dy="9" stdDeviation="8" flood-color="#324a36" flood-opacity=".1"/></filter></defs>
+<rect width="600" height="375" fill="#e4e8d5"/><circle cx="506" cy="323" r="120" fill="#d5ddbe"/>
+<text x="32" y="36" font-family="Arial,sans-serif" font-size="9" letter-spacing="2" fill="#5a6e4d">STREAM / FROM COMPLEXITY TO CLARITY</text>
+<g transform="translate(45 93) rotate(-5 99 70)" filter="url(#s)"><rect width="192" height="143" rx="6" fill="#365846"/><rect x="10" y="10" width="172" height="100" rx="3" fill="#486b50"/><circle cx="96" cy="59" r="22" fill="#d9e1b8"/><path d="m91 49 15 10-15 10Z" fill="#365846"/><path d="M16 126h160" stroke="#91a779" stroke-width="2"/><path d="M16 126h58" stroke="#f7f7e9" stroke-width="2"/><circle cx="74" cy="126" r="3" fill="#f7f7e9"/></g>
+<path d="M245 165h36m-8-6 8 6-8 6" stroke="#6b7d59" fill="none" stroke-width="1.5"/>
+<g transform="translate(306 86) rotate(7 113 96)" filter="url(#s)"><rect x="24" y="16" width="201" height="195" rx="4" fill="#aebd94"/><rect x="12" y="8" width="201" height="195" rx="4" fill="#c9d2b3"/><rect width="201" height="195" rx="4" fill="#fdfcf5"/><text x="18" y="30" font-family="Arial,sans-serif" font-size="8" letter-spacing="1.5" fill="#687958">A CLEARER LEARNING PATH</text><path d="M18 41h163" stroke="#d4dcc7"/><g font-family="Georgia,serif" font-size="22" fill="#365846"><text x="18" y="75">01</text><text x="18" y="121">02</text><text x="18" y="167">03</text></g><g stroke="#b9c3a9" stroke-width="3"><path d="M61 62h106M61 74h79M61 108h106M61 120h90M61 154h106M61 166h67"/></g></g>
+<g transform="translate(264 268)" stroke="#ab6749" stroke-width="3" stroke-linecap="round"><path d="M0-19v38M-19 0h38M-13-13l26 26M-13 13l26-26"/></g>
+<text x="32" y="346" font-family="Georgia,serif" font-size="23" fill="#365846">Complex lessons. Clear next steps.</text><text x="549" y="346" font-family="Arial,sans-serif" font-size="10" fill="#5a6e4d">02</text>
+</svg>

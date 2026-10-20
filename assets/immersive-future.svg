@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 375">
+<defs><pattern id="g" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0v36" stroke="#c8bfd1" stroke-width=".6" fill="none"/></pattern><filter id="s"><feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#4c4059" flood-opacity=".13"/></filter></defs>
+<rect width="600" height="375" fill="#e7e0ea"/><rect x="280" y="50" width="320" height="265" fill="url(#g)" opacity=".6"/>
+<text x="32" y="36" font-family="Arial,sans-serif" font-size="9" letter-spacing="2" fill="#6f6079">IMMERSIVE FUTURE / A NEW PERSPECTIVE</text>
+<circle cx="302" cy="181" r="120" fill="#d6cbdf"/><circle cx="302" cy="181" r="101" fill="none" stroke="#b7a8c5" stroke-width="1"/>
+<path d="M197 169c-15-97 223-97 208 0" stroke="#71637e" stroke-width="21" fill="none"/>
+<g filter="url(#s)"><path d="M214 133h174c21 0 34 13 34 33v48c0 14-14 23-27 20l-75-15c-12-2-26-2-38 0l-75 15c-13 3-27-6-27-20v-48c0-20 13-33 34-33Z" fill="#fffaf5"/><path d="M221 148h160c17 0 26 10 26 22v31c0 9-7 15-16 13l-71-13c-11-2-27-2-38 0l-71 13c-9 2-16-4-16-13v-31c0-12 9-22 26-22Z" fill="#6e617b"/><path d="M218 161h70" stroke="#9e90aa" stroke-width="3" stroke-linecap="round"/><circle cx="380" cy="164" r="3" fill="#c4b3ce"/></g>
+<g transform="translate(435 88) rotate(8)"><rect width="92" height="89" rx="3" fill="#f9f5ee"/><text x="13" y="26" font-family="Arial,sans-serif" font-size="7" letter-spacing="1" fill="#796b80">A MOMENT OF</text><text x="12" y="47" font-family="Georgia,serif" font-size="19" fill="#6f6079">discovery.</text><path d="m17 65 5 5 10-12" stroke="#809273" fill="none" stroke-width="2"/></g>
+<path d="M69 236c35-25 56 30 84 0M63 251c35-25 56 30 84 0" fill="none" stroke="#a597b2" stroke-width="1.5"/>
+<text x="32" y="346" font-family="Georgia,serif" font-size="23" fill="#62546c">Understanding the learner experience.</text><text x="549" y="346" font-family="Arial,sans-serif" font-size="10" fill="#6f6079">03</text>
+</svg>
