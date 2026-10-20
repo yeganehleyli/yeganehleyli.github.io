@@ -19,3 +19,6 @@
 .profile-portrait figcaption{font-size:12px;color:var(--muted);max-width:125px;line-height:1.7}
 .footer-links{flex-wrap:wrap}
 @media(max-width:650px){.profile-portrait-image{width:116px;height:116px}.footer-links{justify-content:flex-start;gap:14px 22px}}
+
+/* Preserve the capitalization typed in the homepage introduction. */
+.hero .kicker{text-transform:none}
