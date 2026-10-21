@@ -22,3 +22,16 @@
 
 /* Preserve the capitalization typed in the homepage introduction. */
 .hero .kicker{text-transform:none}
+
+/* Coordinated isometric icons for strengths, process, and experience. */
+.section-isometric{display:block;aspect-ratio:1;height:auto;object-fit:contain;flex:none}
+.strength-icon{width:96px;height:96px;margin:0 0 14px}
+.process-top{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:108px}
+.process-top .process-icon{position:static;width:108px;height:108px;max-width:68%}
+.process-step h3{margin-top:18px}
+.experience-item summary{grid-template-columns:80px minmax(0,1fr) auto;column-gap:18px}
+.experience-icon{width:80px;height:80px}
+.experience-copy{min-width:0}
+.experience-item .detail-body{padding-left:98px}
+@media(max-width:850px){.process-top{min-height:90px}.process-top .process-icon{width:90px;height:90px}.experience-item summary{grid-template-columns:64px minmax(0,1fr) auto;column-gap:12px}.experience-icon{width:64px;height:64px}.experience-item .detail-body{padding-left:76px}}
+@media(max-width:650px){.strength-icon{width:88px;height:88px}.process-top{min-height:100px}.process-top .process-icon{width:100px;height:100px}.experience-item .detail-body{padding-left:0}}
