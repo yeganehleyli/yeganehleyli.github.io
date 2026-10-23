@@ -35,3 +35,16 @@
 .experience-item .detail-body{padding-left:98px}
 @media(max-width:850px){.process-top{min-height:90px}.process-top .process-icon{width:90px;height:90px}.experience-item summary{grid-template-columns:64px minmax(0,1fr) auto;column-gap:12px}.experience-icon{width:64px;height:64px}.experience-item .detail-body{padding-left:76px}}
 @media(max-width:650px){.strength-icon{width:88px;height:88px}.process-top{min-height:100px}.process-top .process-icon{width:100px;height:100px}.experience-item .detail-body{padding-left:0}}
+
+/* Isometric illustrations for every tool and method. */
+.tools-band{display:block;padding-top:28px}
+.tools-band .eyebrow{font-family:var(--sans);line-height:1.65;margin:0 0 20px;min-width:0}
+.tool-list.tool-grid{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:12px;margin:0;padding:0;list-style:none}
+.tool-card{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:10px;min-width:0;padding:14px 8px 13px;border:1px solid #e0e3d9;border-radius:8px;background:#f0f1eb;text-align:center}
+.tool-isometric{width:64px;height:64px;object-fit:contain;flex:none}
+.tool-list .tool-name{display:block;padding:0;background:none;border-radius:0;font-size:11px;line-height:1.5;font-weight:500;color:var(--ink)}
+@media(max-width:1100px){.tool-list.tool-grid{grid-template-columns:repeat(6,minmax(0,1fr))}}
+@media(max-width:850px){.tool-list.tool-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:650px){.tools-band{padding-top:24px}.tool-list.tool-grid{gap:10px}.tool-card{padding:12px 6px}.tool-isometric{width:56px;height:56px}}
+@media(max-width:480px){.tool-list.tool-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
