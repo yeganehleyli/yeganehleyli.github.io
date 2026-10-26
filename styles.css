@@ -48,3 +48,30 @@
 @media(max-width:650px){.tools-band{padding-top:24px}.tool-list.tool-grid{gap:10px}.tool-card{padding:12px 6px}.tool-isometric{width:56px;height:56px}}
 @media(max-width:480px){.tool-list.tool-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 
+
+/* Journal illustrations and bounded motion for featured publications. */
+.publication.publication-with-journal{grid-template-columns:82px minmax(0,1fr) 24px;gap:20px;align-items:center}
+.publication-mark{display:flex;flex-direction:column;align-items:center;gap:4px}
+.journal-isometric{display:block;width:76px;height:76px;object-fit:contain;transform-origin:50% 70%}
+.publication-mark .publication-year{padding-top:0;font-size:11px}
+.publication-copy{min-width:0}
+.publication-venue{display:block;margin-top:6px;font-size:11px;font-weight:600;line-height:1.6;color:var(--green)}
+.publication-with-journal .publication-type{margin-top:3px}
+.publication.publication-with-journal .arrow{align-self:start;margin-top:8px}
+.publication-with-journal.is-in-view .journal-isometric{animation:journal-arrive 1.8s ease-in-out 2;animation-delay:var(--journal-delay,0s)}
+.publication-with-journal:is(:hover,:focus-visible) .journal-isometric{animation:journal-greet .8s ease-in-out 1}
+.publication-with-journal:focus-visible{outline:2px solid var(--green);outline-offset:5px;border-radius:4px}
+@keyframes journal-arrive{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-5px) rotate(-3deg)}}
+@keyframes journal-greet{0%,100%{transform:translateY(0) rotate(0)}40%{transform:translateY(-5px) rotate(-4deg)}75%{transform:translateY(-2px) rotate(2deg)}}
+@media(max-width:650px){
+.publication.publication-with-journal{grid-template-columns:58px minmax(0,1fr) 16px;gap:12px;padding-block:22px}
+.journal-isometric{width:56px;height:56px}
+.publication-venue{font-size:10px;margin-top:7px}
+.publication-mark .publication-year{font-size:10px}
+.publication-with-journal .publication-title{font-size:14px}
+}
+@media(prefers-reduced-motion:reduce){
+.publication-with-journal .journal-isometric,
+.publication-with-journal.is-in-view .journal-isometric,
+.publication-with-journal:is(:hover,:focus-visible) .journal-isometric{animation:none!important;transform:none!important}
+}
