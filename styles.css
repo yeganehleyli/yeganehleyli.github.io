@@ -130,3 +130,7 @@
 .case-table th,.case-table td{padding:11px 12px}
 .case-steps li{padding-left:35px}
 }
+
+/* Keep the complete preschool activity visible. */
+.preschool-case .case-cover{max-height:none;object-fit:contain}
+.preschool-case .case-table{min-width:0}
