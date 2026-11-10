@@ -1,5 +1,5 @@
-/* Portfolio learning practice: two single-row, horizontally browsable collections. */
-.practice-band { border-block: 1px solid var(--line); padding: 32px 0 36px; }
+/* Expertise and strategies wrap; the methods row uses the same card sizes. */
+.practice-band { --card-basis: calc((100% - 60px) / 6); --card-gap: 12px; border-block: 1px solid var(--line); padding: 32px 0 36px; }
 .practice-band, .practice-group { min-width: 0; }
 .practice-kicker { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px 24px; margin-bottom: 16px; }
 .practice-kicker .eyebrow { color: var(--green); }
@@ -19,8 +19,12 @@
 .practice-step:disabled { opacity: .38; cursor: default; }
 .practice-step:not(:disabled):hover, .practice-close:hover { color: var(--white); background: var(--green); border-color: var(--green); }
 .practice-step svg, .practice-close svg { width: 18px; height: 18px; }
-.practice-rail { display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 60px) / 6); align-items: stretch; column-gap: 12px; list-style: none; margin: 0; padding: 4px 0 9px; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scrollbar-width: thin; scrollbar-color: #b2bdac transparent; }
-.practice-rail li { min-width: 0; scroll-snap-align: start; display: flex; }
+.practice-rail, .practice-grid { list-style: none; margin: 0; padding: 4px 0 9px; gap: var(--card-gap); align-items: stretch; }
+.practice-grid { display: flex; flex-wrap: wrap; justify-content: center; }
+.practice-rail li, .practice-grid li { display: flex; min-width: 0; }
+.practice-grid li { flex: 0 0 var(--card-basis); }
+.practice-rail { display: grid; grid-auto-flow: column; grid-auto-columns: var(--card-basis); overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scrollbar-width: thin; scrollbar-color: #b2bdac transparent; }
+.practice-rail li { scroll-snap-align: start; }
 .practice-card { width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; gap: 8px; text-align: center; padding: 15px 10px 17px; min-height: 137px; border-radius: 9px; border: 1px solid #d9dfd2; background: #eef0e9; color: var(--ink); position: relative; transition: background .17s ease, border-color .17s ease; }
 .practice-group[data-kind="strategies"] .practice-card { background: #f2eee6; border-color: #e1dbd0; }
 .practice-card:hover, .practice-group[data-kind="strategies"] .practice-card:hover { background: var(--white); border-color: #81957d; }
@@ -72,8 +76,8 @@ html.practice-dialog-open { overflow: hidden; }
 .practice-guide-group .practice-entry:target { border-color: #839778; }
 .practice-guide-group .practice-entry-head { grid-template-columns: 65px minmax(0, 1fr); }
 .practice-guide-group .practice-entry-icon { width: 65px; height: 65px; }
-@media (max-width: 1050px) { .practice-rail { grid-auto-columns: calc((100% - 48px) / 5); } }
-@media (max-width: 850px) { .practice-rail { grid-auto-columns: calc((100% - 36px) / 4); } }
+@media (max-width: 1050px) { .practice-band { --card-basis: calc((100% - 48px) / 5); } }
+@media (max-width: 850px) { .practice-band { --card-basis: calc((100% - 36px) / 4); } }
 @media (max-width: 660px) {
  .practice-band { padding: 25px 0; }
  .practice-kicker { display: block; margin-bottom: 16px; }
@@ -83,7 +87,7 @@ html.practice-dialog-open { overflow: hidden; }
  .practice-controls { gap: 4px; }
  .practice-range { font-size: 11px; margin-right: 3px; }
  .practice-step { width: 36px; height: 36px; padding: 8px; }
- .practice-rail { grid-auto-columns: calc((100% - 20px) / 3); gap: 10px; }
+ .practice-band { --card-basis: calc((100% - 20px) / 3); --card-gap: 10px; }
  .practice-card { padding: 13px 8px; }
  .practice-card-name { font-size: 13px; }
  .practice-card-icon { width: 64px; height: 64px; }
@@ -98,7 +102,7 @@ html.practice-dialog-open { overflow: hidden; }
  .practice-heading { flex-wrap: wrap; row-gap: 9px; }
  .practice-heading > div:first-child { flex: 1 1 175px; }
  .practice-heading p { display: none; }
- .practice-rail { grid-auto-columns: calc((100% - 10px) / 2); }
+ .practice-band { --card-basis: calc((100% - 10px) / 2); }
  .practice-range { margin: 0 2px 0 0; }
  .practice-controls { margin-left: auto; }
  .practice-card { min-height: 128px; }
@@ -107,6 +111,7 @@ html.practice-dialog-open { overflow: hidden; }
 }
 @media (prefers-reduced-motion: reduce) { .practice-card, .practice-card-icon { transition: none; } }
 @media print {
+ .practice-grid { --card-basis: calc((100% - 24px) / 4); --card-gap: 8px; }
  .practice-controls, .practice-dialog, .practice-open-mark, .practice-hint { display: none !important; }
  .practice-rail { display: grid; grid-auto-flow: row; grid-template-columns: repeat(4,1fr); gap: 8px; overflow: visible; }
  .practice-card { break-inside: avoid; }

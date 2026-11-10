@@ -5,8 +5,8 @@
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   const scrollBehavior = () => reduceMotion.matches ? "instant" : "smooth";
 
-  for (const group of practice.querySelectorAll(".practice-group")) {
-    const rail = group.querySelector(".practice-rail");
+  for (const rail of practice.querySelectorAll(".practice-rail")) {
+    const group = rail.closest(".practice-group");
     const cards = Array.from(rail.querySelectorAll(".practice-card"));
     const controls = group.querySelector(".practice-controls");
     const previous = controls.querySelector("[data-direction='-1']");
