@@ -73,27 +73,30 @@
   if (!dialog || typeof dialog.showModal !== "function") return;
   const pane = dialog.querySelector(".practice-dialog-body");
   const close = dialog.querySelector(".practice-close");
-  const cards = Array.from(practice.querySelectorAll(".practice-card[data-entry]"));
+  const cards = Array.from(document.querySelectorAll(".practice-card[data-entry]"));
   if (!cards.length) return;
-  const guideURL = new URL(cards[0].href);
-  guideURL.hash = "";
-  let guidePromise = null;
+  const sectionLabel = dialog.querySelector(".practice-dialog-bar .eyebrow");
+  const guides = new Map();
   let opener = null;
   let request = 0;
-  function getGuide() {
-    if (!guidePromise) {
-      guidePromise = fetch(guideURL.href, {credentials: "same-origin"})
+  function getGuide(card) {
+    const url = new URL(card.href);
+    url.hash = "";
+    const key = url.href;
+    if (!guides.has(key)) {
+      const reading = fetch(key, {credentials: "same-origin"})
         .then(response => {
           if (!response.ok) throw Error("Guide unavailable");
           return response.text();
         })
         .then(html => new DOMParser().parseFromString(html, "text/html"))
-        .catch(error => {guidePromise=null; throw error;});
+        .catch(error => {guides.delete(key); throw error;});
+      guides.set(key, reading);
     }
-    return guidePromise;
+    return guides.get(key);
   }
-  const warm = () => {getGuide().catch(() => {});};
   for (const card of cards) {
+    const warm = () => {getGuide(card).catch(() => {});};
     card.setAttribute("aria-haspopup", "dialog");
     card.setAttribute("aria-controls", dialog.id);
     card.addEventListener("pointerenter", warm, {once: true});
@@ -103,6 +106,8 @@
       event.preventDefault();
       const token = ++request;
       opener = card;
+      const tool = card.closest('.practice-group')?.dataset.kind === "tools";
+      sectionLabel.textContent = tool ? "Tools & methods" : "Design in practice";
       const pending = document.createElement("p");
       pending.className = "practice-loading";
       pending.textContent = "Opening " + card.textContent.trim().replace(/\s+/g, " ") + "…";
@@ -110,12 +115,12 @@
       pane.replaceChildren(pending);
       pane.setAttribute("aria-busy","true");
       dialog.removeAttribute("aria-labelledby");
-      dialog.setAttribute("aria-label","Instructional design explanation");
+      dialog.setAttribute("aria-label", tool ? "Tool or method explanation" : "Instructional design explanation");
       if (!dialog.open) dialog.showModal();
       document.documentElement.classList.add("practice-dialog-open");
       dialog.scrollTop=0;
       try {
-        const source = (await getGuide()).getElementById(card.dataset.entry);
+        const source = (await getGuide(card)).getElementById(card.dataset.entry);
         if (token !== request || !dialog.open) return;
         if (!source || !source.classList.contains("practice-entry")) throw Error("Missing guide entry");
         const entry = document.importNode(source, true);
