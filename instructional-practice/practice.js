@@ -30,7 +30,7 @@
       if (!onScreen.length) return;
       const text = overflow
         ? (onScreen[0] + 1) + "–" + (onScreen[onScreen.length-1] + 1) + " of " + cards.length
-        : cards.length + (group.dataset.kind === "methods" ? " methods" : " strategies");
+        : cards.length + " " + ({methods:"methods", strategies:"strategies", expertise:"areas"}[group.dataset.kind] || "items");
       if (range.textContent !== text) range.textContent = text;
     }
     function toPage(direction) {
@@ -73,7 +73,8 @@
   if (!dialog || typeof dialog.showModal !== "function") return;
   const pane = dialog.querySelector(".practice-dialog-body");
   const close = dialog.querySelector(".practice-close");
-  const cards = Array.from(practice.querySelectorAll(".practice-card"));
+  const cards = Array.from(practice.querySelectorAll(".practice-card[data-entry]"));
+  if (!cards.length) return;
   const guideURL = new URL(cards[0].href);
   guideURL.hash = "";
   let guidePromise = null;

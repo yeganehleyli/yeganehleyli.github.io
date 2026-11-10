@@ -25,7 +25,7 @@ https://leyli-learning-design.opalsole4.chatgpt.site/profile-photo
 
 Sign in with the ChatGPT account that owns the portfolio, choose or replace your photo, and save. The GitHub homepage loads the public photo from that existing site. Return to the GitHub tab to refresh the photo. The editor and stored photo continue to depend on the existing Sites publication; the main portfolio pages and other assets are served by GitHub. No visitor sign-in is required to view a published photo.
 
-If there is no photo, the About section displays without a portrait. A failed photo request also leaves the rest of the portfolio readable.
+The circular portrait appears beside your name and introduction at the top of the homepage. If you remove the photo or the image is unavailable, the name and introduction still appear.
 
 For a photo hosted entirely on GitHub instead, upload a square JPG as **assets/profile-photo.jpg** and change `PHOTO_SOURCE` from `'sites'` to `'github'` in **profile-portrait.js**. To update that version later, replace the JPG in the repository. The Sites editor will no longer control it.
 

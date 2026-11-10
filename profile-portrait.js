@@ -17,7 +17,9 @@
   function refreshPhoto() {
     portrait.src = `${source}?updated=${Date.now()}`;
   }
-  refreshPhoto();
+  // The public image starts loading with the name, even without JavaScript.
+  if (portrait.getAttribute('src') !== source) refreshPhoto();
+  else if (portrait.complete) figure.hidden = !portrait.naturalWidth;
   // Returning from the editor refreshes a replaced or removed photo.
   document.addEventListener('visibilitychange', () => {
     if (document.visibilityState === 'visible') refreshPhoto();
