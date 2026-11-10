@@ -135,13 +135,16 @@
 .preschool-case .case-cover{max-height:none;object-fit:contain}
 .preschool-case .case-table{min-width:0}
 
-/* Public profiles and direct email in the homepage introduction. */
-.hero-profile-links{display:flex;align-items:center;flex-wrap:wrap;gap:2px clamp(10px,1.5vw,22px);width:fit-content;max-width:100%;margin-top:13px}
-.hero-profile-links>a{display:inline-flex;align-items:center;gap:7px;min-height:44px;padding:2px 0;border-radius:4px;font-size:13px;line-height:1.35;color:var(--green);white-space:nowrap}
-.hero-profile-icon{display:inline-grid;place-items:center;flex:0 0 31px;width:31px;height:31px;background:#e8ece3;border:1px solid #d6ded1;border-radius:8px}
-.hero-profile-icon svg{display:block;width:20px;height:20px;flex:none}
-.hero-profile-links>a:hover .hero-profile-icon,.hero-profile-links>a:focus-visible .hero-profile-icon{background:#dbe4d7;border-color:#adbea9}
-.hero-profile-links>a:hover>span:last-child,.hero-profile-links>a:focus-visible>span:last-child{text-decoration:underline;text-underline-offset:3px}
-.hero-profile-links+.hero-actions{margin-top:19px}
-@media(max-width:650px){.hero-profile-links{margin-top:10px;column-gap:14px}.hero-profile-links+.hero-actions{margin-top:15px}}
-@media(max-width:360px){.hero-profile-links{column-gap:6px}.hero-profile-links>a{font-size:12px;gap:4px}.hero-profile-icon{flex-basis:24px;width:24px;height:24px;border-radius:6px}.hero-profile-icon svg{width:17px;height:17px}}
+/* Profile links stay in the top bar when the main navigation collapses. */
+.header-inner{gap:clamp(10px,1.5vw,22px)}
+.header-profile-links{margin-inline-start:auto;display:flex;align-items:center;gap:12px;padding-inline-end:18px;position:relative;flex:none}
+.header-profile-links::after{content:"";position:absolute;inset-inline-end:0;top:9px;bottom:9px;border-inline-end:1px solid var(--line)}
+.header-profile-links>a{display:inline-flex;align-items:center;gap:6px;min-width:44px;min-height:44px;padding:2px;border-radius:5px;color:var(--green);font-size:13px;line-height:1.3;white-space:nowrap}
+.header-profile-icon{width:30px;height:30px;display:grid;place-items:center;flex:none;border:1px solid #d6ded1;border-radius:8px;background:#e8ece3}
+.header-profile-icon img{display:block;width:20px;height:20px}
+.header-profile-links>a:hover .header-profile-icon,.header-profile-links>a:focus-visible .header-profile-icon{border-color:#adbea9;background:#dbe4d7}
+.header-profile-links>a:hover .header-profile-label,.header-profile-links>a:focus-visible .header-profile-label{text-decoration:underline;text-underline-offset:3px}
+@media(max-width:960px){.header-profile-label{display:none}.header-profile-links{gap:0;padding-inline-end:8px}.header-profile-links>a{width:44px;justify-content:center}}
+@media(min-width:651px) and (max-width:780px){.header-inner{gap:8px}.header-inner .brand{gap:8px}.header-inner .nav{gap:12px}.header-inner .nav-contact{gap:7px}}
+@media(max-width:650px){.header-profile-links{padding-inline-end:0}.header-profile-links::after{display:none}}
+@media(max-width:380px){.site-header .container{width:calc(100% - 24px)}.header-inner{gap:5px}.header-inner .brand{gap:7px}.header-inner .menu-toggle{padding:7px 9px}}
