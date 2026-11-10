@@ -1,0 +1,44 @@
+/* The specialty row spans the introduction, including the illustration column. */
+.hero.hero-with-expertise{padding-top:clamp(23px,2.4vw,36px)}
+.hero-with-expertise .hero-grid{margin-top:clamp(20px,2.3vw,32px)}
+.hero-with-expertise h1{margin-top:0}
+.hero-expertise{--tile-gap:7px;min-width:0}
+.expertise-heading,.expertise-tools,.expertise-controls{display:flex;align-items:center}
+.expertise-heading{justify-content:space-between;gap:14px;margin:0 0 11px}
+#expertise-title{margin:0;font:normal 400 clamp(23px,2vw,29px)/1.15 var(--serif);letter-spacing:-.035em;color:var(--ink)}
+.expertise-tools{gap:12px;flex:none}
+.expertise-hint{font:400 12px/1.4 var(--sans);color:var(--muted)}
+.expertise-controls{gap:5px}
+.expertise-controls[hidden]{display:none}
+.expertise-controls button{display:grid;place-items:center;width:36px;height:36px;padding:0;background:var(--white);color:var(--green);border:1px solid #aab8aa;border-radius:50%}
+.expertise-controls button:not(:disabled):hover{background:var(--green);color:white;border-color:var(--green)}
+.expertise-controls button:disabled{opacity:.38;cursor:default}
+.expertise-viewport{max-width:100%;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;scrollbar-width:thin;scrollbar-color:#a8b6a3 transparent;padding:2px 2px 10px}
+.expertise-track{display:grid;grid-template-columns:minmax(0,2.46fr) minmax(0,2.13fr) minmax(0,4.05fr) minmax(0,1.36fr);gap:clamp(12px,1.25vw,18px);width:100%;min-width:1104px}
+.expertise-group{display:grid;grid-template-rows:auto 1fr;min-width:0;gap:8px}
+.expertise-category{display:flex;align-items:center;gap:9px;margin:0;color:#495b4d;font:600 12.5px/1.35 var(--sans);letter-spacing:.025em}
+.expertise-category:after{content:"";height:1px;background:#ced5cb;flex:1}
+.expertise-group ul{display:grid;gap:var(--tile-gap);margin:0;padding:0;list-style:none;min-width:0}
+.expertise-technology ul{grid-template-columns:minmax(0,.89fr) minmax(0,1.28fr)}
+.expertise-design ul{grid-template-columns:minmax(0,.92fr) minmax(0,1.13fr)}
+.expertise-education ul{grid-template-columns:minmax(0,1.05fr) minmax(0,.84fr) minmax(0,.8fr) minmax(0,1.29fr)}
+.expertise-group li{display:flex;min-width:0}
+.expertise-fern{--surface:#e3ecdf;--rim:#a4b79b;--type:#2e4736}
+.expertise-mint{--surface:#daebe4;--rim:#9ab6a8;--type:#2c4a3e}
+.expertise-clay{--surface:#f5e1d7;--rim:#d0ab96;--type:#563d30}
+.expertise-rose{--surface:#efdddd;--rim:#c8a4a5;--type:#563c40}
+.expertise-wheat{--surface:#f2e8ce;--rim:#c9b987;--type:#534626}
+.expertise-apricot{--surface:#f3ddc4;--rim:#c8a782;--type:#563e29}
+.expertise-olive{--surface:#e8ebd4;--rim:#b5be91;--type:#404a2c}
+.expertise-slate{--surface:#dfe8ec;--rim:#a1b6be;--type:#354b55}
+.expertise-heather{--surface:#e9e2ed;--rim:#b5a6c0;--type:#4e4057}
+.expertise-tile{width:100%;min-width:0;min-height:83px;display:flex;align-items:flex-start;justify-content:center;flex-direction:column;gap:3px;padding:9px clamp(8px,.74vw,12px);border:1px solid var(--rim);border-radius:8px;color:var(--type);background:var(--surface);box-shadow:0 3px 0 var(--rim);text-decoration:none;scroll-snap-align:start;transition:transform .16s ease,box-shadow .16s ease}
+.expertise-name{font:400 clamp(18px,1.53vw,21px)/1.13 var(--serif);letter-spacing:-.023em;text-wrap:balance}
+.expertise-note{font:500 12px/1.2 var(--sans);color:var(--type)}
+@media(hover:hover){.expertise-tile:hover{transform:translateY(-2px);box-shadow:0 5px 0 var(--rim)}}
+.expertise-tile:focus-visible{outline:2px solid var(--green);outline-offset:-4px;transform:translateY(-2px);box-shadow:0 5px 0 var(--rim)}
+.expertise-tile:active{transform:translateY(2px);box-shadow:0 1px 0 var(--rim)}
+@media(max-width:850px){.expertise-track{min-width:1170px}.expertise-name{font-size:19px}}
+@media(max-width:650px){.hero.hero-with-expertise{padding-top:18px}.hero-with-expertise .hero-grid{margin-top:25px}.expertise-heading{margin-bottom:8px}.expertise-hint{display:none}.expertise-track{gap:14px}.expertise-tile{min-height:78px}.expertise-group{gap:7px}.expertise-controls button{width:36px;height:36px}}
+@media(prefers-reduced-motion:reduce){.expertise-tile,.expertise-tile:hover,.expertise-tile:focus-visible,.expertise-tile:active{transform:none;transition:none;box-shadow:0 3px 0 var(--rim)}}
+@media print{.expertise-viewport{overflow:visible}.expertise-controls,.expertise-hint{display:none}.expertise-track{min-width:0;display:flex;flex-wrap:wrap;gap:10px}.expertise-group{flex:1 1 auto}.expertise-tile{min-height:45px;box-shadow:none}.expertise-name{font-size:13px}}
