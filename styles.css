@@ -134,3 +134,14 @@
 /* Keep the complete preschool activity visible. */
 .preschool-case .case-cover{max-height:none;object-fit:contain}
 .preschool-case .case-table{min-width:0}
+
+/* Public profiles and direct email in the homepage introduction. */
+.hero-profile-links{display:flex;align-items:center;flex-wrap:wrap;gap:2px clamp(10px,1.5vw,22px);width:fit-content;max-width:100%;margin-top:13px}
+.hero-profile-links>a{display:inline-flex;align-items:center;gap:7px;min-height:44px;padding:2px 0;border-radius:4px;font-size:13px;line-height:1.35;color:var(--green);white-space:nowrap}
+.hero-profile-icon{display:inline-grid;place-items:center;flex:0 0 31px;width:31px;height:31px;background:#e8ece3;border:1px solid #d6ded1;border-radius:8px}
+.hero-profile-icon svg{display:block;width:20px;height:20px;flex:none}
+.hero-profile-links>a:hover .hero-profile-icon,.hero-profile-links>a:focus-visible .hero-profile-icon{background:#dbe4d7;border-color:#adbea9}
+.hero-profile-links>a:hover>span:last-child,.hero-profile-links>a:focus-visible>span:last-child{text-decoration:underline;text-underline-offset:3px}
+.hero-profile-links+.hero-actions{margin-top:19px}
+@media(max-width:650px){.hero-profile-links{margin-top:10px;column-gap:14px}.hero-profile-links+.hero-actions{margin-top:15px}}
+@media(max-width:360px){.hero-profile-links{column-gap:6px}.hero-profile-links>a{font-size:12px;gap:4px}.hero-profile-icon{flex-basis:24px;width:24px;height:24px;border-radius:6px}.hero-profile-icon svg{width:17px;height:17px}}
